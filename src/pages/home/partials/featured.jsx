@@ -1,109 +1,90 @@
-import { useState } from 'react';
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import { shopi2, shopy3, shopy4, shopy5, shopy6, shopy7, shopy8, itemCart01 } from '../../../constant/images/images';
 
-const CardShop = ({ img, title, price }) => {
-    return (
-        <div>
-            <div className="w-[22vw] h-[70vh]">
-                <img className='w-full h-full object-cover' src={img} alt="" />
-            </div>
-            <div className="">
-                <p className='text-black/70'>{title}</p>
-                <span className='text-black/70'>{price}</span>
-            </div>
-        </div>
-    );
-};
+function Carousel2() {
+    const products = [
+        { img: shopi2, title: "Boxy3 T-Shirt with Roll sleeve", price: "$20,00" },
+        { img: shopy3, title: "Boxy2 T-Shirt with Roll sleeve", price: "$20,00" },
+        { img: shopy4, title: "Boxy1 T-Shirt with Roll sleeve", price: "$20,00" },
+        { img: shopy5, title: "Boxy T-Shirt with Roll sleeve Details", price: "$20,00" },
+        { img: shopy6, title: "Boxy7 T-Shirt with Roll sleeve", price: "$20,00" },
+        { img: shopy7, title: "Boxy6 T-Shirt with Roll sleeve", price: "$20,00" },
+        { img: shopy8, title: "Boxy5 T-Shirt with Roll sleeve", price: "$20,00" },
+        { img: itemCart01, title: "Boxy4 T-Shirt with Roll sleeve", price: "$20,00" },
+    ];
 
-const Carousel22 = ({ pages }) => {
-    const [currentPage, setCurrentPage] = useState(0);
-
-    const totalPages = pages.length;
-
-    const nextPage = () => {
-        setCurrentPage((prev) => (prev + 1) % totalPages);
-    };
-
-    const prevPage = () => {
-        setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
-    };
-
-    const goToPage = (index) => {
-        setCurrentPage(index);
-    };
+    const [hoveredIndex, setHoveredIndex] = useState(null);
 
     return (
-        <div className="w-full max-w-7xl mx-auto px-4 py-8">
-            {/* Carousel Container */}
-            <div className="relative">
-                {/* Cards Grid */}
-                <div className="overflow-hidden">
-                    <div
-                        className="flex transition-transform duration-500 ease-in-out"
-                        style={{ transform: `translateX(-${currentPage * 100}%)` }}
-                    >
-                        {pages.map((page, pageIndex) => (
+        <div className="relative max-w-7xl mx-auto px-4 py-10">
+            <h1 className="text-center text-3xl tracking-wide pb-18 font-bold">FEATURES PRODUCTS</h1>
+            <Swiper
+                modules={[Navigation, Autoplay]}
+                navigation={{
+                    nextEl: ".custom-next",
+                    prevEl: ".custom-prev",
+                }}
+                autoplay={{ delay: 4000 }}
+                loop={true}
+                speed={800}
+                slidesPerView={4}
+                slidesPerGroup={4}
+                spaceBetween={20}
+                breakpoints={{
+                    0: { slidesPerView: 1, slidesPerGroup: 1 },
+                    640: { slidesPerView: 2, slidesPerGroup: 2 },
+                    1024: { slidesPerView: 4, slidesPerGroup: 4 },
+                }}
+            >
+                {products.map((product, index) => (
+                    <SwiperSlide key={index}>
+                        <div
+                            className="relative overflow-hidden "
+                            onMouseEnter={() => setHoveredIndex(index)}
+                            onMouseLeave={() => setHoveredIndex(null)}
+                        >
+                            <img
+                                src={product.img}
+                                alt={product.title}
+                                className="w-full h-100 object-cover"
+                            />
+
                             <div
-                                key={pageIndex}
-                                className="min-w-full flex justify-center gap-6 px-4"
+                                className={`absolute inset-0 flex items-center justify-center transition duration-300 ${hoveredIndex === index ? "bg-black/30" : "bg-black/0"
+                                    }`}
                             >
-                                {page.map((item) => (
-                                    <CardShop
-                                        key={item.id}
-                                        img={item.img}
-                                        title={item.title}
-                                        price={item.price}
-                                    />
-                                ))}
+                                {hoveredIndex === index && (
+                                    <button className="bg-black absolute bottom-3  hover:bg-blend-screen hover:bg-[#E65540] text-[17px] font-light text-white px-10 py-2 rounded-full transition duration-300">
+                                        ADD TO CARD
+                                    </button>
+                                )}
                             </div>
-                        ))}
-                    </div>
-                </div>
 
-                {/* Navigation Arrows */}
-                <button
-                    onClick={prevPage}
-                    className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white hover:bg-gray-100 rounded-full p-3 shadow-lg transition-all"
-                    aria-label="Previous page"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                </button>
 
-                <button
-                    onClick={nextPage}
-                    className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white hover:bg-gray-100 rounded-full p-3 shadow-lg transition-all"
-                    aria-label="Next page"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
-            </div>
-
-            {/* Pagination Dots */}
-            <div className="flex justify-center gap-2 mt-8">
-                {pages.map((_, index) => (
-                    <button
-                        key={index}
-                        onClick={() => goToPage(index)}
-                        className={`w-3 h-3 rounded-full transition-all ${currentPage === index
-                                ? 'bg-black w-8'
-                                : 'bg-black/30 hover:bg-black/50'
-                            }`}
-                        aria-label={`Go to page ${index + 1}`}
-                    />
+                        </div>
+                        <div className="mt-2 text-center">
+                            <h3 className="text-[17px] font-light tracking-wide text-start">{product.title}</h3>
+                            <p className="text-[18px] font-light text-black text-start">{product.price}</p>
+                        </div>
+                    </SwiperSlide>
                 ))}
+            </Swiper>
+
+            <div className="custom-prev absolute -left-12 top-1/2 -translate-y-1/2 z-30
+                      w-12 h-12 flex items-center justify-center text-7xl text-gray-400 hover:text-gray-600 cursor-pointer text-3xl">
+                &#8249;
             </div>
 
-            {/* Page Counter */}
-            <div className="text-center mt-4 text-black/70">
-                <span className="text-sm">
-                    Page {currentPage + 1} of {totalPages}
-                </span>
+            <div className="custom-next absolute -right-12 top-1/2 -translate-y-1/2 z-30
+                      w-12 h-12 flex items-center justify-center text-7xl text-gray-400 hover:text-gray-600 cursor-pointer text-3xl">
+                &#8250;
             </div>
         </div>
     );
-};
+}
 
-export default Carousel22;
+export default Carousel2;
