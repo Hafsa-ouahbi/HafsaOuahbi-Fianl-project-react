@@ -6,7 +6,7 @@ import { IoBagHandleOutline } from "react-icons/io5";
 
 const Nav = () => {
     return (
-        <div className='flex items-center justify-between px-50 py-7  shadow-md z-50 bg-white fixed top-0 left-0 w-full'>
+        <div className='flex items-center justify-between px-50 py-7  shadow-md z-50 bg-white  w-full'>
             <img src={logo} alt="" />
             <div className='flex gap-10'>
                 <Link to="/" className="font-light  a relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-hafsa after:transition-all after:duration-300 hover:after:w-full hover:text-hafsa transition-colors duration-300">Home</Link>

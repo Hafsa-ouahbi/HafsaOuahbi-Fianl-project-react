@@ -18,15 +18,13 @@ const Hero = () => {
         setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
     };
 
-    // Auto-play (optional - remove if not needed)
     useEffect(() => {
         const interval = setInterval(nextSlide, 5000);
         return () => clearInterval(interval);
     }, []);
 
     return (
-        <div className="relative w-full h-56 md:h-96 overflow-hidden rounded-lg z-10 mt-20">
-            {/* Slides */}
+        <div className="relative w-full h-56 md:h-96 overflow-hidden rounded-lg ">
             {slides.map((slide, index) => (
                 <div
                     key={index}
@@ -41,7 +39,6 @@ const Hero = () => {
                 </div>
             ))}
 
-            {/* Previous Button */}
             <button
                 onClick={prevSlide}
                 className="absolute top-1/2 left-4 -translate-y-1/2 z-30 group focus:outline-none"
@@ -59,7 +56,6 @@ const Hero = () => {
                 </span>
             </button>
 
-            {/* Next Button */}
             <button
                 onClick={nextSlide}
                 className="absolute top-1/2 right-4 -translate-y-1/2 z-30 group focus:outline-none"
@@ -77,7 +73,6 @@ const Hero = () => {
                 </span>
             </button>
 
-            {/* Indicators */}
             <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2 z-30">
                 {slides.map((_, index) => (
                     <button

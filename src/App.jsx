@@ -1,15 +1,14 @@
 import Nav from "./layout/nav"
-import Hero from "./pages/home/partials/hero"
-import cards from "./pages/home/partials/cards"
+import Home from "./pages/home"
+
 
 function App() {
   return (
     <>
-    <Nav />
-    <Hero />
-    <cards />
-
-
+    <div className="flex flex-col">
+    <Nav></Nav>
+    <Home></Home>
+    </div>
       {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />

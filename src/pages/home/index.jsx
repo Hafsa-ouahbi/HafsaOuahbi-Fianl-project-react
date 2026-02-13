@@ -1,11 +1,16 @@
 import React from 'react';
+import Hero from './partials/hero';
+import Cards from './partials/cards';
+import Carousel22 from './partials/featured';
 
-const index = () => {
+const Home = () => {
     return (
         <div>
-            <Home></Home>
+            <Hero ></Hero>
+            <Cards></Cards>
+            <Carousel22></Carousel22>
         </div>
     );
 };
 
-export default index;
+export default Home;
