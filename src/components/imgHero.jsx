@@ -1,6 +1,6 @@
 import React from 'react';
 
-const imgHero = ({ title, image }) => {
+const ImgHero = ({ title, image }) => {
     return (
         <div className="relative h-64 md:h-80 w-full flex items-center justify-center overflow-hidden">
             <img
@@ -18,4 +18,4 @@ const imgHero = ({ title, image }) => {
     );
 };
 
-export default imgHero;
+export default ImgHero;

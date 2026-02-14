@@ -1,10 +1,13 @@
 import React from 'react';
+import ImgHero from '../../components/imgHero';
+import ProductsGrid from './partials/shop';
+import { banner } from '../../constant/images/images';
 
 const Shop = () => {
     return (
         <div>
-            
-            <h1>hello</h1>
+            <ImgHero title="PRODUCTS" image={banner} />
+            <ProductsGrid />
         </div>
     );
 };

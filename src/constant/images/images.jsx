@@ -1,3 +1,4 @@
+// src/constant/images/images.jsx
 import banner02 from '../../assets/images/banner-02.jpg';
 import banner07 from '../../assets/images/banner-07.jpg';
 import banner08 from '../../assets/images/banner-08.jpg';
@@ -42,6 +43,18 @@ import shopy6 from '../../assets/images/shopy6.webp';
 import shopy7 from '../../assets/images/shopy7.webp';
 import shopy8 from '../../assets/images/shopy8.webp';
 import visa from '../../assets/images/visa.png.webp';
+
+
+export const productImages = {
+    shopi2,
+    shopy3,
+    shopy4,
+    shopy5,
+    shopy6,
+    shopy7,
+    shopy8,
+    itemCart01
+};
 
 export {
     banner02,

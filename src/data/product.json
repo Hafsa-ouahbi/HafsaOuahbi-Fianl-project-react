@@ -1,0 +1,162 @@
+[
+    {
+        "id": 1,
+        "name": "Boxy3 T-Shirt with Roll sleeve",
+        "image": "shopi2",
+        "price": 20.0,
+        "description": "Comfortable boxy fit t-shirt with stylish roll sleeves",
+        "category": "Women",
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "colors": [
+            "White",
+            "Black",
+            "Gray"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Boxy2 T-Shirt with Roll sleeve",
+        "image": "shopy3",
+        "price": 20.0,
+        "description": "Comfortable boxy fit t-shirt with stylish roll sleeves",
+        "category": "Women",
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "colors": [
+            "White",
+            "Black",
+            "Gray"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Boxy1 T-Shirt with Roll sleeve",
+        "image": "shopy4",
+        "price": 20.0,
+        "description": "Comfortable boxy fit t-shirt with stylish roll sleeves",
+        "category": "Women",
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "colors": [
+            "White",
+            "Black",
+            "Gray"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Boxy T-Shirt with Roll sleeve Details",
+        "image": "shopy5",
+        "price": 20.0,
+        "description": "Comfortable boxy fit t-shirt with stylish roll sleeves",
+        "category": "Women",
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "colors": [
+            "White",
+            "Black",
+            "Gray"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Boxy7 T-Shirt with Roll sleeve",
+        "image": "shopy6",
+        "price": 20.0,
+        "description": "Comfortable boxy fit t-shirt with stylish roll sleeves",
+        "category": "Women",
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "colors": [
+            "White",
+            "Black",
+            "Gray"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Boxy6 T-Shirt with Roll sleeve",
+        "image": "shopy7",
+        "price": 20.0,
+        "description": "Comfortable boxy fit t-shirt with stylish roll sleeves",
+        "category": "Women",
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "colors": [
+            "White",
+            "Black",
+            "Gray"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Boxy5 T-Shirt with Roll sleeve",
+        "image": "shopy8",
+        "price": 20.0,
+        "description": "Comfortable boxy fit t-shirt with stylish roll sleeves",
+        "category": "Women",
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "colors": [
+            "White",
+            "Black",
+            "Gray"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Boxy4 T-Shirt with Roll sleeve",
+        "image": "itemCart01",
+        "price": 20.0,
+        "description": "Comfortable boxy fit t-shirt with stylish roll sleeves",
+        "category": "Women",
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "colors": [
+            "White",
+            "Black",
+            "Gray"
+        ]
+    }
+]

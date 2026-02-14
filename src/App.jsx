@@ -1,8 +1,9 @@
+import { Routes, Route } from "react-router-dom"
 import Footer1 from "./layout/footer"
 import Nav from "./layout/nav"
 import Home from "./pages/home"
 import Shop from "./pages/shop"
-import { Routes, Route } from "react-router-dom"
+import ProductDetail from "./pages/shop/ProductDetails"
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/shop/product/:id" element={<ProductDetail />} />
         </Routes>
       </main>
       <Footer1 />
