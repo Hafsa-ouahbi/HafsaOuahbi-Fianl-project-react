@@ -4,14 +4,15 @@ import { shopy4 } from '../../../constant/images/images';
 const MainSection = () => {
     return (
         <div className="max-w-7xl mx-auto px-4 py-20">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start overflow-hidden">
                 {/* left Side */}
-                <div className="flex justify-center md:justify-end overflow-hidden group">
+                <div className="flex rounded-2xl justify-center md:justify-end overflow-hidden group">
                     <img
                         src={shopy4}
                         alt="About us"
-                        className="w-full max-w-md h-auto transition-transform duration-500 group-hover:scale-110"
+                        className="w-full max-w-md rounded-xl h-auto transition-transform duration-500 overflow-hidden group-hover:scale-110"
                     />
+                    
                 </div>
 
                 {/* right Side */}
