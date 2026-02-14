@@ -11,7 +11,7 @@ const Scale = {
 
 const Cards = () => {
     return (
-        <div className="mt-10 px-30 grid grid-cols-3 grid-rows-4 gap-4 h-300">
+        <div className="mt-10 px-30 grid grid-cols-3 grid-rows-2 py-10 gap-4 h-300">
 
             {/* 1. Dresses - Left (Tall) */}
             <motion.div className="row-span-2 relative group overflow-hidden">
